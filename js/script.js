@@ -16,7 +16,7 @@ if (answer >= 18){
 
 console.log(answer+5);*/
 
-const answers = [];
+//const answers = [];
 
 /*answers[0] = prompt('You name?', '');
 answers[1] = prompt('You sur?', '');
@@ -44,12 +44,13 @@ let decr = 10;
 --decr;
 
 console.log(incr);
-console.log(decr);*/
+console.log(decr);
 
 
 
 const isChecked = true,
     isClose = false;
 
-console.log(isChecked || !isClose);
+console.log(isChecked || !isClose);*/
+
 
