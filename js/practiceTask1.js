@@ -20,47 +20,28 @@
     }
 
 Проверить, чтобы все работало без ошибок в консоли */
-/* 
-let numberOfFilms = +prompt(`How much films did you watch?`,``);
-console.log(numberOfFilms);*/
 
-/* 
-let clearObj = null;
-let arr = [];
-let bool = false;
+let numberOfFilms = +prompt(`How much films did you watch?`,``);
+
 let privat;
 
 let obj = {
-    countFilms: ``,
-    movies: ``,
-    actors: ``,
-    genres: ``,
-    privat: ``,
-};
-obj.countFilms = numberOfFilms;
-obj.movies = clearObj;
-obj.actors = clearObj;
-obj.genres = arr;
-obj.privat = bool;
-
-console.log(obj.countFilms);
-console.log(obj.movies);
-console.log(obj.actors);
-console.log(obj.genres);
-console.log(obj.privat);
-*/
-
-
-let movie1 = prompt(`Один из последних просмотренных фильмов?`,``);
-let mark1 = +prompt(`На сколько оцените его?`,``);
-
-let movie2 = prompt(`Один из последних просмотренных фильмов?`,``);
-let mark2 = +prompt(`На сколько оцените его?`,``);
-
-let movies = {
-    [movie1]: mark1,
-    [movie2]: mark2,
+    countFilms: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
 };
 
 
-console.log(movies);
+
+const movie1 = prompt(`Один из последних просмотренных фильмов?`,``),
+    mark1 = +prompt(`На сколько оцените его?`,``),
+    movie2 = prompt(`Один из последних просмотренных фильмов?`,``),
+    mark2 = +prompt(`На сколько оцените его?`,``);
+    
+obj.movies[movie1]=mark1;
+obj.movies[movie1]=mark1;
+
+
+console.log(obj);
