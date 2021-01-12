@@ -51,6 +51,45 @@ console.log(decr);
 const isChecked = true,
     isClose = false;
 
-console.log(isChecked || !isClose);*/
+console.log(isChecked || !isClose);
 
 
+if (4==4) {
+    console.log(`Ok!`);
+}else{
+    console.log(`error`);
+}
+
+
+const num = 60;
+if (num<60) {
+    console.log(`1!`);
+}else if (num>=60){
+    console.log(`2`);
+}else if (num == 60){
+    console.log(`3`);
+}
+
+(num == 60) ? console.log(`Ok!`) : console.log(`error!`);
+
+let num = 50;
+
+while (num <= 55){
+    console.log(num);
+    num++;
+
+}
+let num = 50;
+do {
+    console.log(num);
+    num++;
+}while(num <= 55);
+
+for (let i = 1;  i < 8; i++){
+    if(i == 6){
+        //break;
+        continue;
+    }
+        console.log(i);
+
+}*/

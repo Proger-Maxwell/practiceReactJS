@@ -1,3 +1,4 @@
+'use strict';
 /* Задание на урок:
 
 1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
@@ -25,8 +26,8 @@ let numberOfFilms = +prompt(`How much films did you watch?`,``);
 
 let privat;
 
-let obj = {
-    countFilms: numberOfFilms,
+let personalMovieDB = {
+    count: numberOfFilms,
     movies: {},
     actors: {},
     genres: [],
@@ -35,13 +36,60 @@ let obj = {
 
 
 
-const movie1 = prompt(`Один из последних просмотренных фильмов?`,``),
+/* const movie1 = prompt(`Один из последних просмотренных фильмов?`,``),
     mark1 = +prompt(`На сколько оцените его?`,``),
     movie2 = prompt(`Один из последних просмотренных фильмов?`,``),
     mark2 = +prompt(`На сколько оцените его?`,``);
     
 obj.movies[movie1]=mark1;
-obj.movies[movie1]=mark1;
+obj.movies[movie2]=mark2;*/
 
 
-console.log(obj);
+console.log(personalMovieDB);
+
+/* Задание на урок:
+
+1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
+
+2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
+возвращаем пользователя к вопросам опять
+
+3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
+"Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
+"Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
+
+4) Потренироваться и переписать цикл еще двумя способами*/
+
+
+
+// Код возьмите из предыдущего домашнего задания
+
+
+
+
+
+for (let i = 1;  i <= numberOfFilms; i++) {
+    let movie = prompt(`Один из последних просмотренных фильмов?`,``),
+        mark = +prompt(`На сколько оцените его?`,``);
+
+        if(movie != null && mark != null && movie != `` && mark != `` && movie.length < 50){
+            personalMovieDB.movies[movie]=mark;
+            alert(`done`);
+        } else {
+            i--;
+            alert(`error`);
+        }
+       
+}
+console.log(personalMovieDB);
+
+if (personalMovieDB.count < 10){
+    alert(`Просмотрено довольно мало фильмов`);
+}else if(personalMovieDB.count > 10 < 30){
+    alert(`Вы классический зритель`);
+}else if(personalMovieDB.count >30){
+    alert(`Вы киноман`);
+}else{
+    alert(`Произошла ошибка`);
+}
