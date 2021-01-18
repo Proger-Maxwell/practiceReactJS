@@ -93,3 +93,59 @@ for (let i = 1;  i < 8; i++){
         console.log(i);
 
 }*/
+
+function showFirstMessage(){
+    console.log(`Hello world!`);
+
+}
+
+showFirstMessage();
+
+
+function plusCalc(a, b){
+
+    return(a + b);
+
+}
+
+console.log(plusCalc(5, 5));
+console.log(plusCalc(15, 5));
+
+function ret(){
+
+    let num = 50;
+
+
+
+    return num;
+
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+const logger = function(){
+    console.log(`Hello`);
+};
+
+logger();
+
+
+const calc = (a, b) => {
+    return a + b;
+};
+
+let str = `Lol-Eto-Kek?`;
+
+console.log (str.toLocaleUpperCase());
+
+const logg = `Hello world!`;
+console.log(logg.slice(6,11));
+console.log(logg.substring(6,11));
+console.log(logg.substr(6, 5));
+
+const num = 12.5;
+console.log(num.round(num));
+
+const test = `15.6px`;
+console.log(parseFloat(test));
