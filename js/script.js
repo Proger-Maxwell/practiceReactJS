@@ -92,8 +92,7 @@ for (let i = 1;  i < 8; i++){
     }
         console.log(i);
 
-}*/
-
+}
 function showFirstMessage(){
     console.log(`Hello world!`);
 
@@ -149,3 +148,89 @@ console.log(num.round(num));
 
 const test = `15.6px`;
 console.log(parseFloat(test));
+
+
+
+function learnJs(lang, callback){
+    console.log(`im learn ${lang}`);
+    callback();
+}
+
+learnJs(`JavaScript`, function(){
+    console.log(`I do it`);
+});
+
+
+const options = {
+
+    name: `test`,
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: `black`,
+        bg:  `red`
+    },
+    makeFunc: function(){
+        console.log(`testFunc`);
+    }
+
+};
+
+const{border,bg} = options.colors;
+
+console.log(border);
+
+// options.makeFunc();
+
+// console.log(options);
+let counter = 0;
+for(let key in options) {
+    if (typeof(options[key])== `object`){
+        for(let i in options[key]){
+            console.log(`Settings ${i}, has znachenie ${options[key][i]}`);
+            counter++;
+        }
+    } else {
+        console.log(`Settings ${key}, has znachenie ${options[key]}`);
+        counter++;
+    }
+}
+console.log(counter);
+
+
+console.log(Object.keys(options).length);
+
+const arr = [1,2,3,4,5,6,8];
+
+arr.forEach(function(item, i, arr){
+    console.log(`${i}: ${item} внутри масива ${arr}`);
+});
+
+arr[99] = 0;
+
+
+console.log(arr.length);
+// arr.pop();
+arr.push(10);
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+// }
+
+for (let value of arr){
+    console.log(value); 
+}
+
+const str = prompt(`?`,``);
+const products = str.split(`, `);
+products.sort();
+console.log(products.join(` | `));
+
+const arr = [1,22,3,4,15,6,8];
+
+arr.sort(compareNum);
+
+console.log(arr);
+
+function compareNum(a, b){
+    return a - b;
+}*/
